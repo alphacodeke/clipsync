@@ -8,8 +8,6 @@
 
 A clean, modern web application that allows users to copy text to clipboard with one click. Features a beautiful UI, real-time status feedback, and fallback support for older browsers.
 
-![ClipSync Demo](https://via.placeholder.com/800x400?text=ClipSync+Demo+Screenshot)
-
 ## ✨ Features
 
 - 🚀 **One-click Copy** - Instantly copy any text to clipboard
@@ -32,6 +30,6 @@ A clean, modern web application that allows users to copy text to clipboard with
 ### Option 1: Direct Download
 
 ```bash
-git clone https://github.com/yourusername/clipsync.git
+git clone https://github.com/alphacodeke/clipsync.git
 cd clipsync
 open index.html
