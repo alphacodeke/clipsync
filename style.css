@@ -1,0 +1,225 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background:#8687d3 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: system-ui, 'Segoe UI', 'Roboto', 'Inter', 'Helvetica Neue', sans-serif;
+      padding: 1.5rem;
+    }
+
+    /* main card */
+    .copy-card {
+      max-width: 620px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(0px);
+      border-radius: 2.5rem;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.02);
+      padding: 2rem 2rem 2.2rem;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #1a2a3a, #0f1a24);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.4rem;
+    }
+
+    .sub {
+      color: #5b6e7c;
+      font-weight: 450;
+      margin-bottom: 1.8rem;
+      border-left: 3px solid #3b82f6;
+      padding-left: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    /* input group */
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    label {
+      font-weight: 550;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #2c3e44;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    label svg {
+      opacity: 0.7;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      font-size: 1rem;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 1.6rem;
+      resize: vertical;
+      transition: all 0.2s;
+      color: #0f172a;
+      line-height: 1.4;
+      outline: none;
+      font-weight: 470;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    textarea:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+      outline: none;
+    }
+
+    /* button row */
+    .action-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.6rem;
+    }
+
+    .copy-btn {
+      background: #0f172a;
+      border: none;
+      padding: 0.85rem 1.8rem;
+      border-radius: 3rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      flex: 1;
+      justify-content: center;
+      letter-spacing: 0.2px;
+    }
+
+    .copy-btn:hover {
+      background: #1e293b;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -12px rgba(15, 23, 42, 0.3);
+    }
+
+    .copy-btn:active {
+      transform: translateY(1px);
+    }
+
+    .copy-btn.success {
+      background: #0f3b2c;
+      background: linear-gradient(110deg, #15803d, #166534);
+      box-shadow: 0 6px 14px rgba(21, 128, 61, 0.2);
+    }
+
+    .status-area {
+      background: #f1f5f9;
+      border-radius: 2rem;
+      padding: 0.7rem 1rem;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #1e293b;
+      font-weight: 500;
+      border: 1px solid #e2edf2;
+    }
+
+    .status-icon {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .status-message {
+      flex: 1;
+    }
+
+    .clear-tip {
+      font-size: 0.7rem;
+      color: #5e727d;
+      margin-top: 1rem;
+      text-align: center;
+      border-top: 1px solid #e9edf2;
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .clear-tip span {
+      cursor: pointer;
+      background: transparent;
+      padding: 0.2rem 0.6rem;
+      border-radius: 40px;
+      transition: 0.1s;
+    }
+
+    .clear-tip span:hover {
+      background: #e9edf2;
+      text-decoration: underline;
+    }
+
+    button {
+      background: none;
+      border: none;
+    }
+
+    @media (max-width: 500px) {
+      .copy-card {
+        padding: 1.5rem;
+      }
+      .copy-btn {
+        padding: 0.7rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @keyframes gentlePulse {
+      0% { opacity: 0.7; transform: scale(0.98);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    .copy-card {
+      animation: gentlePulse 0.3s ease-out;
+    }
+
+    .footer-note {
+      font-size: 0.7rem;
+      text-align: center;
+      margin-top: 1rem;
+      color: #8198a5;
+    }
